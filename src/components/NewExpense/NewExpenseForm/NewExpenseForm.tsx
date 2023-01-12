@@ -1,16 +1,16 @@
-import { ChangeEvent, FormEvent, FunctionComponent, useState } from "react";
-import { ExpenseType } from "../../../types/expenseTypes";
-import "./NewExpenseForm.css";
+import { ChangeEvent, FormEvent, FunctionComponent, useState } from 'react';
+import { ExpenseType } from '../../../types/expenseTypes';
+import './NewExpenseForm.css';
 
 interface Props {
   onSaveExpenseData: (expenseData: ExpenseDataNoId) => void;
 }
 
-type ExpenseDataNoId = Omit<ExpenseType, "id">;
+type ExpenseDataNoId = Omit<ExpenseType, 'id'>;
 const NewExpenseForm: FunctionComponent<Props> = ({ onSaveExpenseData }) => {
-  const [enteredTitle, setEnteredTitle] = useState("");
-  const [enteredAmount, setEnteredAmount] = useState("");
-  const [enteredDate, setEnteredDate] = useState("");
+  const [enteredTitle, setEnteredTitle] = useState('');
+  const [enteredAmount, setEnteredAmount] = useState('');
+  const [enteredDate, setEnteredDate] = useState('');
 
   /* Another way of managing multiple states
   const [userInput, setUserInput] = useState({
@@ -46,9 +46,9 @@ const NewExpenseForm: FunctionComponent<Props> = ({ onSaveExpenseData }) => {
       date: new Date(enteredDate),
     };
     onSaveExpenseData(expenseData);
-    setEnteredTitle("");
-    setEnteredAmount("");
-    setEnteredDate("");
+    setEnteredTitle('');
+    setEnteredAmount('');
+    setEnteredDate('');
   };
 
   return (
